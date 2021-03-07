@@ -1,0 +1,20 @@
+{
+    "services": {
+        "rest": {
+            "host": "0.0.0.0",
+            "port": 4200
+        }
+    },
+    "request_body": {
+    	"max_size_allowed": "50mb"
+    },
+    "aws": {
+        "secret_name": "<YOUR_SECRET_NAME>",
+        "username": "<YOUR_USERNAME>",
+        "AWS_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>",
+        "AWS_SECRET_ACCESS_KEY": "<YOUR_AWS_SECRET_ACCESS_KEY>",
+        "FILE_UPLOAD_BUCKET": "<YOUR_AWS_BUCKET_NAME>",
+        "CLOUDFRONT_URL": "<CONFIGURED_CLOUDFRONT_URL>",
+        "region": "<AWS_REGION>",
+    }
+}
