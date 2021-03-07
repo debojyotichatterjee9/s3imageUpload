@@ -1,7 +1,6 @@
-// var AWSXRay = require('aws-xray-sdk');
 const AWS = require('aws-sdk');
-const CLOUDFRONT = require('aws-cloudfront-sign')
 const config = require('config');
+const { v4: uuidv4 } = require('uuid');
 
 
 exports.ImageService = class ImageService {
@@ -137,7 +136,6 @@ exports.ImageService = class ImageService {
         }
         const type = base64Image.split(';')[0].split('/')[1];
         const imageBuffer = new Buffer.from(base64Image.replace(/^data:image\/\w+;base64,/, ""), 'base64');
-        const { v4: uuidv4 } = require('uuid');
         const filename = uuidv4().replace(/[ -]/g, '');
         const params = {
             Bucket: FILE_UPLOAD_BUCKET,
