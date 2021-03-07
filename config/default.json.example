@@ -1,5 +1,5 @@
 {
-    "services": {
+    "service": {
         "rest": {
             "host": "0.0.0.0",
             "port": 4200
@@ -9,7 +9,6 @@
     	"max_size_allowed": "50mb"
     },
     "aws": {
-        "secret_name": "<YOUR_SECRET_NAME>",
         "username": "<YOUR_USERNAME>",
         "AWS_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>",
         "AWS_SECRET_ACCESS_KEY": "<YOUR_AWS_SECRET_ACCESS_KEY>",

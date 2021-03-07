@@ -187,6 +187,8 @@ exports.ImageService = class ImageService {
             }
         }
 
+
+// You can also use the putObject function to replace an existing object and/or upload a new object 
         // try {
             //uploading the object to the bucket
             // const { ETag } = await s3.putObject(params).promise();
@@ -209,31 +211,5 @@ exports.ImageService = class ImageService {
         // console.log(amazonResponse);
 
         return amazonResponse;
-    }
-
-    async retrieveImageUrl(userId, imageFilename, imageCategory) {
-
-        const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, FILE_UPLOAD_BUCKET, CLOUDFRONT_URL } = config.get('aws');
-
-        const options = {
-            keypairId: AWS_ACCESS_KEY_ID,
-            privateKeyString: AWS_SECRET_ACCESS_KEY,
-            expireTime: 1426625464599
-        }
-        let cloudFrontResponse = {};
-        try {
-
-            // cloudFrontResponse = await CLOUDFRONT.getSignedUrl(`${CLOUDFRONT_URL}/kali-linux-4k-pm.jpg`, options).promise();
-            cloudFrontResponse = {
-                imageUrl: `${CLOUDFRONT_URL}/uploads/${imageCategory}/${userId}/${imageFilename}`
-            }
-        }
-        catch (error) {
-            cloudFrontResponse = {
-                imageUrl: ``
-            }
-        }
-        // console.log(cloudFrontResponse)
-        return cloudFrontResponse;
     }
 };
