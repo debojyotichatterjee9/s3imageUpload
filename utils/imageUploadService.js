@@ -205,7 +205,7 @@ exports.ImageService = class ImageService {
         //         statusCode
         //     }
         // }
-
+        // log the response from amazon for your reference
         // console.log(amazonResponse);
 
         return amazonResponse;
